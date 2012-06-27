@@ -1,0 +1,27 @@
+2012-06-27 11:36:33,935 - [INFO] - from play in main 
+Listening for HTTP on port 9000...
+
+2012-06-27 11:36:57,519 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
+Application started (Dev)
+
+2012-06-27 11:37:13,065 - [INFO] - from play in play-akka.actor.actions-dispatcher-11 
+Starting application default Akka system.
+
+2012-06-27 11:37:36,480 - [INFO] - from play in play-akka.actor.default-dispatcher-4 
+Shutdown application default Akka system.
+
+2012-06-27 11:37:36,603 - [INFO] - from play in play-akka.actor.default-dispatcher-4 
+Application started (Dev)
+
+2012-06-27 11:38:01,556 - [INFO] - from play in play-akka.actor.default-dispatcher-9 
+Application started (Dev)
+
+2012-06-27 11:38:19,761 - [INFO] - from play in play-akka.actor.default-dispatcher-10 
+Application started (Dev)
+
+2012-06-27 11:38:25,228 - [INFO] - from play in play-akka.actor.actions-dispatcher-10 
+Starting application default Akka system.
+
+2012-06-27 11:48:45,178 - [INFO] - from play in main 
+Shutdown application default Akka system.
+

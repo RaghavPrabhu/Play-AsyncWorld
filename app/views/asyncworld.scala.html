@@ -1,0 +1,72 @@
+@(name: String)
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Welcome to Play Application demo</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        
+        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap-modal.js")" type="text/javascript"></script>
+        
+         <script type="text/javascript">
+           $(function() {
+        	   $("#click").click(function(){  
+        		   $("#mypopup").empty();
+        		   $('#profile_modal').modal('show')
+        		   $.get("asyncresponse/RaghavPrabhu", function(data, textstatus){
+        			   $("#mypopup").append("<h4>Hello "+ data.username+",</h4><br>");
+        			   $("#mypopup").append("<h5>Current Date/Time is : "+data.currenttime+",</h5>")
+        		   });
+        		   
+        	   });
+           });
+          </script> 
+        
+        
+    </head>
+    <body>
+	<div align="center" style="margin-top:200px">  
+	        <div class="container-fluid">
+               <div class="row-fluid" >
+                 <div class="span10">
+			        <h2>Welcome @name!</h2>  
+			        <p>Click the below button to see the popup message</p>    
+			       </div>   			      
+			   </div>
+			  </div>   
+			  <br>
+			  <div class="row" style="margin-left:400px">
+ 					 <div class="span6">
+    					<div class="row">
+     						<!--  <div class="span2" > <input type="text" class="input-medium" id="text-input"></div>-->
+      						<div class="span1" align="center"> <button class="btn btn-success" id="click" type="submit">Welcome </button> </div>
+    					</div>
+  					</div>
+					</div>
+					
+			   <!-- This is Bootstrap's modal popup plugin. Used to populate the response
+                      by clicking on the button -->
+                      
+                  <div class="modal hide" id="profile_modal" style="width:350px;height:200px">
+           			<div class="modal-header">
+           			     <button type="button" class="close" data-dismiss="modal">x</button>            			
+                 		 <div class="popup_header" style="margin-top:0">
+                 		     <div id="myheader"><h4>Welcome to Play Application</h4></div>
+                 		 </div>
+          		    </div>   
+          		    <div class="modal-body">
+          		      <div id="mypopup"></div>
+          		    </div>       			     		  
+                </div>        		
+					
+					
+					
+	</div>
+  </body>
+ </html> 	
